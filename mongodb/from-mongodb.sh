@@ -1,6 +1,5 @@
 #!/bin/sh
 
-sh install.sh
 DIR_CURR=$(cd $(dirname $0); pwd)
 
 # --

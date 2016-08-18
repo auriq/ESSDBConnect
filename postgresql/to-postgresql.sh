@@ -16,7 +16,6 @@ postgre_pswd=essentia
 postgre_dbname=posgres_logstash_sample_database
 postgre_tbname=posgres_logstash_sample_table
 
-sh install.sh
 
 # -- define vars based on user specification
 # logstash

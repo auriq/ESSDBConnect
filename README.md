@@ -6,6 +6,8 @@
 
 - java8
 
+- logstash2.3.4
+
 
 ## Dataset in this sample
 

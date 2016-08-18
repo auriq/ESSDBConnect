@@ -8,6 +8,8 @@
 
 - logstash2.3.4
 
+- aq_tools 1.2.4-2
+
 
 ## Dataset in this sample
 

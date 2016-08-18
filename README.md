@@ -1,4 +1,6 @@
 # Samples how essentia connects to DBs.
+This repository is for samples to connect a various DBs from/to essentia.
+
 
 ## Environment
 
@@ -6,7 +8,7 @@
 
 - java8
 
-- logstash2.3.4
+- logstash2.3.4 ("logstash-input-jdbc" and "logstash-output-jdbc" plugins)
 
 - aq_tools 1.2.4-2
 
@@ -23,4 +25,6 @@ Each sample uses us-names.csv data that comes from [free sample data](https://ww
 2. run "to-*.sh" (ex. `sh to-mysql.sh`)
 
 3. run "from-*.sh" (ex. `sh from-mysql.sh`)
+  In "from-*.sh" script, it pulls data that is pushed by "to-*.sh".
+
 

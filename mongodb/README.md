@@ -1,7 +1,7 @@
 
-# Essentia Category & MySQL Integration Sample
+# Essentia Category & Mongodb Integration Sample
 
-This sample is for users who want to stream your category data into mysql.
+This sample is for users who want to stream your category data into mongodb.
 
 
 ## Required environment
@@ -10,7 +10,7 @@ This sample is for users who want to stream your category data into mysql.
 
 - logstash
 
-- mysql
+- mongodb
 
 
 
@@ -48,29 +48,35 @@ Installation process usually depends on which environment you use, so please ref
 		$ bin/logstash-plugin install logstash-output-jdbc
 
 
-* mysql
+* mongodb
 
-		$ sudo yum -y install mysql-server 
-		$ sudo service mysqld start # start mysql server 
-		$ sudo chkconfig mysqld on # if you want to make mysql server always start when your machine reboot.
+	Please refere to the mongodb's official site as [this](https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-amazon/), but briefly speaking, 
 
+	1. configure yum
+	1. install mongodb
+
+		`$ sudo yum install -y mongodb-org`
+
+	1. start mongodb
+
+		`$ sudo service mongod start`
 
 
 ---
 
 ## How to run sample shells
 
-* to-mysql.sh
+* to-mongodb.sh
 
-	This sample will create category, db schema and stream category data into the mysql table.
+	This sample will create category and stream it into the mongodb table.
 
-		$ sh to-mysql.sh
+		$ sh to-mongodb.sh
 
-* from-mysql.sh
+* from-mongodb.sh
 
-	This sample will pull data from mysql that is stored by "to-mysql.sh" and pipe it to aq commands.
+	This sample will pull data from mongodb that is stored by "to-mongodb.sh" and pipe it to aq commands.
 
-		$ sh from-mysql.sh
+		$ sh from-mongodb.sh
 
 
 

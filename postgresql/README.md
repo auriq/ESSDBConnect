@@ -1,7 +1,7 @@
 
-# Essentia Category & MySQL Integration Sample
+# Essentia Category & PostgreSQL Integration Sample
 
-This sample is for users who want to stream your category data into mysql.
+This sample is for users who want to stream your category data into postgresql.
 
 
 ## Required environment
@@ -10,7 +10,7 @@ This sample is for users who want to stream your category data into mysql.
 
 - logstash
 
-- mysql
+- postgresql
 
 
 
@@ -48,11 +48,13 @@ Installation process usually depends on which environment you use, so please ref
 		$ bin/logstash-plugin install logstash-output-jdbc
 
 
-* mysql
+* postgresql
 
-		$ sudo yum -y install mysql-server 
-		$ sudo service mysqld start # start mysql server 
-		$ sudo chkconfig mysqld on # if you want to make mysql server always start when your machine reboot.
+		$ sudo yum install -y libxslt.i686 
+		$ sudo yum install -y postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs 
+		$ sudo service postgresql initdb # init db
+		$ sudo service postgresqld start # start postgresql server 
+		$ sudo chkconfig postgresqld on  # if you want to make postgresql server always start when your machine reboot.
 
 
 
@@ -60,17 +62,17 @@ Installation process usually depends on which environment you use, so please ref
 
 ## How to run sample shells
 
-* to-mysql.sh
+* to-postgresql.sh
 
-	This sample will create category, db schema and stream category data into the mysql table.
+	This sample will create category, db schema and stream category data into the postgresql table.
 
-		$ sh to-mysql.sh
+		$ sh to-postgresql.sh
 
-* from-mysql.sh
+* from-postgresql.sh
 
-	This sample will pull data from mysql that is stored by "to-mysql.sh" and pipe it to aq commands.
+	This sample will pull data from postgresql that is stored by "to-postgresql.sh" and pipe it to aq commands.
 
-		$ sh from-mysql.sh
+		$ sh from-postgresql.sh
 
 
 

@@ -14,7 +14,6 @@ This sample is for users who want to stream your category data into mongodb.
 
 
 
----
 
 ## Install tips
 
@@ -62,7 +61,6 @@ Installation process usually depends on which environment you use, so please ref
 		`$ sudo service mongod start`
 
 
----
 
 ## How to run sample shells
 

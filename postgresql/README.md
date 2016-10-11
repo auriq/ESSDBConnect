@@ -14,7 +14,6 @@ This sample is for users who want to stream your category data into postgresql.
 
 
 
----
 
 ## Install tips
 
@@ -58,7 +57,6 @@ Installation process usually depends on which environment you use, so please ref
 
 
 
----
 
 ## How to run sample shells
 

@@ -1,37 +1,36 @@
 
 # Essentia Category & PostgreSQL Integration Sample
 
-This sample is for users who want to stream your category data into postgresql.
+This sample illustrates how essentia connects to PostgreSQL database with using Logstash and its jdbc driver.
 
 
 ## Required environment
 
 - essentia and aqtools
 
-- logstash
+- Logstash
 
-- postgresql
+- PostgreSQL
 
 
 
 
 ## Install tips
 
-Installation process usually depends on which environment you use, so please refere to the official site for details.
-(samples below worked on ec2 instance)
+Installation process usually depends on which environment you use, so please refere to the official site for details (Samples below worked on ec2 instance).
 
-* java
+* Java8
 
-	Since logstash needs java, if you do not have java in your environment, 
+	Logstash requires Java8. If you do not have it in your environment, run the following
 
 		$ sudo yum install -y java-1.8.0 java-1.8.0-openjdk-devel
 
-	If you already have java8, but is set to other version, then run it and choose version8.
+	If you already have Java8, but is set to other version, then run it and choose version8.
 
 		$ sudo /usr/sbin/alternatives --config java
 
 
-* logstash
+* Logstash
 
 	Pull tar file from [the official](https://www.elastic.co/downloads/logstash) and uncompress.
 
@@ -40,20 +39,20 @@ Installation process usually depends on which environment you use, so please ref
 		$ tar -xvf logstash-2.3.4.tar
 
 
-* logstash jdbc plugin
+* Logstash jdbc plugin
 
 		$ cd logstash-2.3.4
 		$ bin/logstash-plugin install logstash-input-jdbc
 		$ bin/logstash-plugin install logstash-output-jdbc
 
 
-* postgresql
+* PostgreSQL
 
 		$ sudo yum install -y libxslt.i686 
 		$ sudo yum install -y postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs 
 		$ sudo service postgresql initdb # init db
-		$ sudo service postgresqld start # start postgresql server 
-		$ sudo chkconfig postgresqld on  # if you want to make postgresql server always start when your machine reboot.
+		$ sudo service postgresqld start # start PostgreSQL server 
+		$ sudo chkconfig postgresqld on  # if you want to make PostgreSQL server always start when your machine reboot.
 
 
 
@@ -62,13 +61,13 @@ Installation process usually depends on which environment you use, so please ref
 
 * to-postgresql.sh
 
-	This sample will create category, db schema and stream category data into the postgresql table.
+	This script will create category, db schema and stream category data into the PostgreSQL table.
 
 		$ sh to-postgresql.sh
 
 * from-postgresql.sh
 
-	This sample will pull data from postgresql that is stored by "to-postgresql.sh" and pipe it to aq commands.
+	This script will pull data from PostgreSQL that is stored by "to-postgresql.sh" and pipe it to aq commands.
 
 		$ sh from-postgresql.sh
 

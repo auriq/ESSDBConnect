@@ -1,13 +1,13 @@
 
-# Samples how essentia connects to DBs.
-This repository is for samples to connect a various DBs from/to essentia with using logstash and jdbc drivers. It contains only "mongodb", "mysql" and "postgresql" samples, but you should be able to connect to any database if you have jdbc and logstash in your environment.
+# Sample : How essentia connects to DBs.
+This repository illustrates how essentia connects a various DBs with using logstash and jdbc drivers. It contains only "mongodb", "mysql" and "postgresql" samples, but you should be able to connect to any database if you have jdbc and logstash in your environment.
 
 
-## Environment that this sample is using
+## Environment used in this sample
 
 - amazon ec2
 
-- java8
+- Java8
 
 - logstash2.3.4 ("logstash-input-jdbc" and "logstash-output-jdbc" plugins)
 
@@ -20,7 +20,7 @@ This repository is for samples to connect a various DBs from/to essentia with us
 
 ## Directories in this repository
 
-Each directories are independent set and contain everything it needs (as dataset and jdbc jar file) except database itself. For example, if you are just interested into "mysql", then you can remove other directories as "mongodb" or "postgresql".
+Each directory is independent of each other and contains everything it needs (as dataset and jdbc jar file) except database itself. For example, if you are just interested into "mysql", then you can remove other directories as "mongodb" or "postgresql".
 
 
 

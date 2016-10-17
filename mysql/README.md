@@ -1,7 +1,7 @@
 
 # Essentia Category & MySQL Integration Sample
 
-This sample illustrates how essentia connects to MySQL database with using Logstash and its jdbc driver.
+This sample illustrates how essentia connects to a MySQL database using Logstash and its jdbc driver.
 
 
 ## Required environment
@@ -17,7 +17,7 @@ This sample illustrates how essentia connects to MySQL database with using Logst
 
 ## Install tips
 
-Installation process usually depends on which environment you use, so please refere to the official site for details (Samples below worked on ec2 instance).
+Installation process usually depends on which environment you use, so please refer to the official site for details (the samples below are for an Amazon EC2 instance).
 
 * Java8
 
@@ -32,7 +32,7 @@ Installation process usually depends on which environment you use, so please ref
 
 * Logstash
 
-	Pull tar file from [the official](https://www.elastic.co/downloads/logstash) and uncompress.
+	Pull tar file from the [official site](https://www.elastic.co/downloads/logstash) and uncompress.
 
 		$ wget https://download.elastic.co/logstash/logstash/logstash-2.3.4.tar.gz
 		$ gunzip logstash-2.3.4.tar.gz
@@ -59,17 +59,17 @@ Installation process usually depends on which environment you use, so please ref
 
 * to-mysql.sh
 
-	This script will create category, db schema and stream category data into the MySQL table.
+	This script will create a category, db schema and stream that category's data into a MySQL table.
 
 		$ sh to-mysql.sh
 
 * from-mysql.sh
 
-	This script will pull data from MySQL that is stored by "to-mysql.sh" and pipe it to aq commands.
+	This script will pull data from MySQL that was stored using the script "to-mysql.sh" and pipe it to aq commands.
 
 		$ sh from-mysql.sh
 
-
+These sample scripts use a category representing the "us-names" dataset included in this github repository and a sample MySQL database and table. However, these scripts can be edited to stream data from different categories into different MySQL databases or to take data from different MySQL databases and send it into various linux or aq commands.
 
 
 
